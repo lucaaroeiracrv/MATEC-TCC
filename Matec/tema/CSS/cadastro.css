@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contPrincipal{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-top: 15px;
+}
+
+.centralizar{
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 600px;
+    border: 1px groove rgb(0, 0, 0, 0.3);
+}
+
+.espacamento{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.imgLogo{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.btnregistrar{
+    align-items: center;
+    justify-content: center;
+    display: flex;  
+}
+
+.jaPossuiConta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 75px;
+    border: 1px groove rgb(0, 0, 0, 0.3);
+}
+
+.jaPossuiConta p{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    height: 50px;
+}
+

@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.caixaimg{
+    width: 50%;
+    height: 100%;
+    background: #F0F8FF;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixaimg img{
+    width: 600px;
+    height: 350px;
+}
+
+.conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.conteudo .formlogin{
+    width: 40%;
+}
+
+.conteudo .formlogin h2{
+    color: black;
+    font-weight: 600;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.conteudo .formlogin .inputs input{
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    font-weight: 400;
+    border: none;
+    font-size: 17px;
+    color: black;
+    background-color: #ecf2f7;
+    
+}
+
+.conteudo .formlogin .inputs span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    display: inline-block;
+    color: black;
+    font-weight: 400;
+}
+
+.conteudo .formlogin .inputs input[type=submit] {
+    background: #4aa4ee;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.conteudo .formlogin .lembrar{
+    margin-bottom: 20px;
+    color:black;
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.conteudo .formlogin .lembrar a{
+    text-decoration: none;
+    color: lightblue;
+}
+
+.conteudo .formlogin .inputs p{
+    padding-top: 10px;
+    color: black;
+}
+
+.conteudo .formlogin .inputs p a{
+    color: #4aa4ee
+}
+
+@media (max-width:868px) {
+    .container .caixaimg{
+        display: none;
+    }
+    .container .conteudo{
+    width: 100%;
+    }
+    .container .conteudo .formlogin{
+    width: 100%;
+    padding: 40px;
+    background: white;
+    margin: 50px;
+    }
+    
+}
+
+@media(max-width:450px) {
+    .container .conteudo .formlogin .lembrar{
+    flex-wrap: wrap;
+    }
+    .container .conteudo .formlogin .lembrar a{
+    margin-top: 20px;
+    }
+}
