@@ -1,24 +1,24 @@
 <?php
 
-$id = $_POST["email"];
-$nome = $_POST["numero_celular"];
-$email = $_POST["usuario"];
-$data = password_hash($_POST["senha"], PASSWORD_DEFAULT); 
+// $id = $_POST["email"];
+// $nome = $_POST["numero_celular"];
+// $email = $_POST["usuario"];
+// $data = password_hash($_POST["senha"], PASSWORD_DEFAULT); 
 
-$mysqli = new mysqli('127.0.0.1', 'root', '', 'matec');
+// $mysqli = new mysqli('127.0.0.1', 'root', '', 'matec');
 
-$mysqli->query("UPDATE users SET user_name = '$nome', user_email = '$email'
-             WHERE users.id = $id");
+// $mysqli->query("UPDATE users SET user_name = '$nome', user_email = '$email'
+//              WHERE users.id = $id");
 
-$sql = 'UPDATE users SET user_name = ?, user_email = ? WHERE users.id = ?';
-$stmt = $mysqli->prepare($sql);
+// $sql = 'UPDATE users SET user_name = ?, user_email = ? WHERE users.id = ?';
+// $stmt = $mysqli->prepare($sql);
 
-if(!$stmt){
-  echo 'erro na consulta: '. $mysqli->errno .' - '. $mysqli->error;
-}
+// if(!$stmt){
+//   echo 'erro na consulta: '. $mysqli->errno .' - '. $mysqli->error;
+// }
 
-$stmt->bind_param('ssi', $nome, $email, $id);
-$stmt->execute();
+// $stmt->bind_param('ssi', $nome, $email, $id);
+// $stmt->execute();
 
 ?>
 
