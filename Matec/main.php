@@ -30,14 +30,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Listagem de Chats</span></a>
-                        </li>
-                        <li>
                             <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Listagem Clientes</span></a>
                         </li>
-                        </li>
                     </ul>
-
                 </div>
             </div>
             <div>

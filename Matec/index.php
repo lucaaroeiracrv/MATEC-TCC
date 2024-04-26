@@ -17,7 +17,7 @@
         <!-- Começo header  -->
         <header class="headpag">
             <div class="caixaimg">
-                <img src="IMG/matec.png">
+                <img src="./tema/IMG/matec.png">
             </div>
             <div class="login">
                 <a href="tela-login.php" class="logbtn">LOGIN</a>
@@ -31,9 +31,9 @@
                 <div class="imgbox">
                     <div class="txtint">
                         <h1>MATEC</h1>
-                        <p>Precisa gerenciar seu sistema com facilidade e tecnologia? <br> A sua solução está aqui</p>
+                        <p>Precisa gerenciar seu sistema de comuincação com facilidade e tecnologia? <br> <br> A sua solução está aqui</p>
                     </div>
-                    <img src="IMG/financa.png">
+                    <img src="./tema/IMG/financa.png">
                 </div>
             </div>
             <div class="contma">
