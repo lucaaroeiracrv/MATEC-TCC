@@ -1,25 +1,21 @@
 <?php
 
-// $id = $_POST["email"];
-// $nome = $_POST["numero_celular"];
-// $email = $_POST["usuario"];
-// $data = password_hash($_POST["senha"], PASSWORD_DEFAULT); 
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
-// $mysqli = new mysqli('127.0.0.1', 'root', '', 'matec');
+    $email = $_POST["email"];
+    $celular = $_POST["numero_celular"];
+    $nome = $_POST["nome"];
+    $sen = $_POST["senha"];
 
-// $mysqli->query("UPDATE users SET user_name = '$nome', user_email = '$email'
-//              WHERE users.id = $id");
+    $conn = mysqli_connect('127.0.0.1', 'root', '' , 'matec');
 
-// $sql = 'UPDATE users SET user_name = ?, user_email = ? WHERE users.id = ?';
-// $stmt = $mysqli->prepare($sql);
+    $senCriptografada = password_hash($sen, PASSWORD_DEFAULT);
 
-// if(!$stmt){
-//   echo 'erro na consulta: '. $mysqli->errno .' - '. $mysqli->error;
-// }
+    var_dump($senCriptografada);
 
-// $stmt->bind_param('ssi', $nome, $email, $id);
-// $stmt->execute();
 
+    $sql = "INSERT INTO matec_login (email, numero_celular, nome, sen) VALUES ($email, $celular, $nome, $sen)";
+}
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +35,7 @@
                 <img src="./tema/IMG/matec-preto.png" class="img-fluid" alt="">
             </div>
             <br>
+            <form method="post" class="formularioCad" id="formCad">
             <div class="mb-3 espacamento">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email">
@@ -48,8 +45,8 @@
                 <input type="text" class="form-control" id="numero_celular" name="numero_celular">
             </div>
             <div class="mb-3 espacamento">
-                <label for="usuario" class="form-label">Usuario</label>
-                <input type="text" class="form-control" id="usuario" name="usuario">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome">
             </div>
             <div class="mb-3 espacamento">
                 <label for="senha" class="form-label">Senha</label>
@@ -58,6 +55,7 @@
                 A senha deverá conter 8-20 caracteres e possuir letras e numeros sem espaços
                 </div>
             </div>
+            </form>
             <div class="mb-3 btnregistrar">
                 <button type="button" class="btn btn-lg btn-primary ">Registrar</button>
             </div>

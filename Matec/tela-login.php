@@ -1,6 +1,15 @@
 <?php
 
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
+    $usu = $_POST["email"];
+    $sen = $_POST["senha"];
+
+    $senCriptografada = password_hash($sen, PASSWORD_DEFAULT);
+
+    var_dump($senCriptografada);
+
+}
 
 ?>
 
@@ -32,15 +41,15 @@
         <div>
             <img src="./tema/IMG/matec-logo.png" class="imgEx">
         </div>
-        <form class="formularioLog" id="formLog">
+        <form method="post" class="formularioLog" id="formLog">
             <h2 class="classTxT">FAZER LOGIN</h2>
             <div class="mb-3 inptPad">
-                <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="senhaDesc">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha" name="senha" aria-describedby="senhaDesc">
                 <div id="senhaDesc" class="form-text">Nunca compartilharemos sua senha à ninguém.</div>
             </div>
             <div class="mb-3 form-check">
