@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ChatBot integrado - MATEC</title>
+</head>
+<body>
+    <div class="boxPergunta">
+        <header>
+            <p>Perguntas e respostas</p>
+        </header>
+        <p id="status"></p>
+        <div id="historico">
+            <!-- CHAT AQUI -->
+        </div>
+       <footer>
+            <input type="text" placeholder="Pergunte aqui..." id="menssagemEnviada">
+            <button id="enviar" onclick="mandarMenssagem()">Enviar</button>
+       </footer>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
