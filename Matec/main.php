@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+
+$nomeUser = $_SESSION["usuario"];
 ?>
 
 <!DOCTYPE html>

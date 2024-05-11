@@ -1,6 +1,33 @@
 <?php
 
+include("classes/bancoDados.php");
 
+session_start();
+
+if (isset($_POST['usuario'])) {
+
+    $user = $_POST["usuario"];
+    $sen = $_POST["senhaUsu"];
+
+    $sql = "SELECT * FROM usuarios_cadastrados WHERE usuario = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param('s', $user);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        // var_dump($row);
+        if (password_verify($sen, $row['senha'])) {
+            $_SESSION['usuario'] = $row['usuario'];
+            header("Location: main.php");
+            exit();
+        }
+    } else {
+        echo "REGISTRO ERRADO";
+        exit();
+    }
+}
 
 ?>
 
@@ -32,15 +59,16 @@
         <div>
             <img src="./tema/IMG/matec-logo.png" class="imgEx">
         </div>
-        <form class="formularioLog" id="formLog">
+        <form method="post">
+            <br>
             <h2 class="classTxT">FAZER LOGIN</h2>
             <div class="mb-3 inptPad">
-                <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="usuario" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="senhaDesc">
+                <label for="senhaUsu" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senhaUsu" name="senhaUsu" aria-describedby="senhaDesc">
                 <div id="senhaDesc" class="form-text">Nunca compartilharemos sua senha à ninguém.</div>
             </div>
             <div class="mb-3 form-check">
@@ -48,7 +76,7 @@
                 <label class="form-check-label" for="exampleCheck1">Lembre-me de mim </label>
             </div>
             <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-primary btnEntrar">ENTRAR</button>
+                <button type="submit" class="btn btn-primary btnEntrar">ENTRAR</button>
             </div>
             <div class="bar"></div>
 
