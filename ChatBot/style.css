@@ -1,0 +1,90 @@
+body{
+    background-color: #413e3e;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.boxPergunta{
+    background-color: #3694eb;
+    margin-top: 3rem;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 600px;
+    max-height: 800px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+header{
+    background-color: #0c5eaa;
+    border-radius: 10px 10px 0 0;
+    color: aliceblue;
+    font-size: 1.4rem;
+}
+
+footer{
+    background-color: #0c5eaa;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+}
+
+input{
+    width: 50%;
+    font-size: 1rem;
+    outline: none;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+button{
+    border-radius: 8px;
+    font-size: 1rem;
+    border: none;
+    padding: 10px;
+}
+button:hover{
+    background-color: gray;
+    cursor: pointer;
+    transition: .4s;
+}
+#historico{
+    padding: 1rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+}
+
+.boxMinhasMenssagens{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.boxRespostas{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.minhasMenssagens{
+    background-color: red; 
+    color: whitesmoke;
+    text-align: right;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0;
+}
+
+.respostas{
+    background-color: blue;
+    color: whitesmoke;
+    text-align: left;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0;
+}
