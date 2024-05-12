@@ -5,6 +5,28 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.conteudo{
-    padding: 25px;
+a{
+    color: black!important;
+}
+
+.navTitulo{
+    font-size:xx-large;
+    padding-left: 15px;
+}
+
+.esapaco{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.centralizarTitle{
+    justify-content: center;
+    display: flex;
+    padding-top: 50px;
+    padding-right: 50px;
+}
+
+.centralizarCont{
+    justify-content: center;
+    display: flex;
 }
