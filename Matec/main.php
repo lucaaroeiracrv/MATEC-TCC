@@ -18,19 +18,30 @@ session_start();
 </head>
 
 <body>
-    <nav class="navbar bg-body-tertiary">
+    <header>
+        <nav>
+            <div class="logo">MATEC</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="./tema/IMG/matec-preto.png" width="300px">
-            </a>
-            <a href="">
-                <div class="rounded-circle divimg" style="height:50px; width:50px;">
-                    <i class="fa-solid fa-user fa-2xl"></i>
-                </div>
-            </a>
+            <div class="block">
+                <h2>Teste nosso Chatbot</h2>
+                <a href="chatbot.php" class="button">Iniciar Teste</a>
+            </div>
+            <div class="block">
+                <h2>Contatos de Plano</h2>
+                <p>Entre em contato conosco para saber mais sobre nossos planos.</p>
+                <a href="contatos.html" class="button">Ver Contatos</a>
+            </div>
         </div>
-    </nav>
-
+    </main>
 </body>
 
 </html>
