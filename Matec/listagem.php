@@ -11,7 +11,7 @@ $assinantes = array();
 
 if ($result->num_rows > 0) {
     // Converter resultados em um array associativo
-    while($row = $result->fetch_assoc()) {
+    while ($row = $result->fetch_assoc()) {
         $assinantes[] = $row;
     }
 }
@@ -56,37 +56,82 @@ if ($result->num_rows > 0) {
                             <th scope="col">Usuario</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Email</th>
+                            <th scope="col">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                            foreach($assinantes as $assinante) {
+                        foreach ($assinantes as $assinante) {
                         ?>
-                        <tr>
-                            <th scope="row"> <?= $assinante['id'] ?></th>
-                            <td> <?= $assinante['usuario'] ?></td>
-                            <td> <?= $assinante['nome'] ?></td>
-                            <td> <?= $assinante['email'] ?></td>
-                        </tr>
+                            <tr>
+                                <th scope="row"> <?= $assinante['id'] ?></th>
+                                <td> <?= $assinante['usuario'] ?></td>
+                                <td> <?= $assinante['nome'] ?></td>
+                                <td> <?= $assinante['email'] ?></td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle rounded-pill dropdown-toggle" type="button" id="dropdownMenuActions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Ações
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuActions">
+                                            <li>
+                                                <button class="dropdown-item">
+                                                    <a href="editar-user.php"><i class="fa-solid fa-user-pen"></i> EDITAR</a>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="dropdown-item" data-bs-target="#ModalCancelarAssinante">
+                                                    <i class="fa-solid fa-x"></i> EXCLUIR
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
                     </tbody>
-                    <?php
-                            }
-                    ?>
+                <?php
+                        }
+                ?>
                 </table>
             </div>
         </div>
     </div>
     </div>
+
+    <div class="modal fade" id="ModalCancelarAssinante" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST" id="cancelar-assinante">
+                        <div class="text-center">
+                            <p>Tem certeza que deseja <strong><?= $assinante['nome']; ?></strong> ?</p>
+                            <input type="hidden" id="form-cancelar-assinante" name="form-cancelar-assinante" value="1">
+                            <input type="hidden" id="form-cancelar-assinante-cancelar" name="form-cancelar-assinante-cancelar" value=<?= $dadosAssinante->deletado_em ? '1' : '0' ?>>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Excluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 
 <script>
     $(document).ready(function() {
         $('#tableAssinantes').DataTable({
-            
+
         });
     });
 </script>
