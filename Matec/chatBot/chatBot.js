@@ -1,5 +1,5 @@
 import readline from 'readline';
-import { mostProbablyQuestion, todosBancos } from "./possiveisPerguntas.js";
+import { mostProbablyQuestion, todosBancos } from "./possiveisPerguntas";
 
 // Cria uma interface readline para leitura de entrada do usuário
 const rl = readline.createInterface({
