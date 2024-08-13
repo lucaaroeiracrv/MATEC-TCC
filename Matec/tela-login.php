@@ -44,46 +44,31 @@ if (isset($_POST['usuario'])) {
 </head>
 
 <body>
-    <!-- header -->
-    <nav class="navbar bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">
-                <img src="./tema/IMG/matec.png" class="imgHead">
-            </a>
-            <i class="fa-solid fa-user fa-2xl" style="color: #ffffff;"></i>
-        </div>
-    </nav>
-    <!-- final header -->
-    <!-- body -->
     <div class="container caixa">
         <div>
             <img src="./tema/IMG/matec-logo.png" class="imgEx">
         </div>
         <form method="post">
-            <br>
             <h2 class="classTxT">FAZER LOGIN</h2>
             <div class="mb-3 inptPad">
-                <label for="usuario" class="form-label">Usuario</label>
+                <label for="usuario" class="form-label">Usuário</label>
                 <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="senhaUsu" class="form-label">Senha</label>
                 <input type="password" class="form-control" id="senhaUsu" name="senhaUsu" aria-describedby="senhaDesc">
-                <div id="senhaDesc" class="form-text">Nunca compartilharemos sua senha à ninguém.</div>
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Lembre-me de mim </label>
+                <div id="senhaDesc" class="form-text">Nunca compartilharemos sua senha com ninguém.</div>
             </div>
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary btnEntrar">ENTRAR</button>
             </div>
             <div class="bar"></div>
 
-            <p class="cadTXT">Não Possui conta?<a href="cadastro.php">CADASTRE-SE</a></p>
+            <p class="cadTXT">Não Possui conta? <a href="cadastro.php">CADASTRE-SE</a></p>
         </form>
     </div>
     <!-- final body -->
 </body>
+
 
 </html>

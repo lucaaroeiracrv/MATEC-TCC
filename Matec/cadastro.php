@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST["usuario"];
     $senha = password_hash($_POST["senha"], PASSWORD_DEFAULT);
     
-    $sql = "INSERT INTO usuarios_cadastrados (email, numero_celular, nome, usuario, senha) VALUES ('$email', '$numeroCelular', '$nome', '$usuario', '$senha')";
+    $sql = "INSERT INTO usuarios_cadastrados (email, numero_celular, nome, usuario, senha, ativo) VALUES ('$email', '$numeroCelular', '$nome', '$usuario', '$senha', '1')";
     $mysqli->query($sql);
     header("Location: tela-login.php");
     exit();
