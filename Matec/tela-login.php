@@ -24,7 +24,7 @@ if (isset($_POST['usuario'])) {
             exit();
         }
     } else {
-        echo "REGISTRO ERRADO";
+        echo "USUARIO OU SENHA ERRADOS";
         exit();
     }
 }

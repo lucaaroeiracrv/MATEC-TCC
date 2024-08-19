@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #f5f5f5; /* Fundo claro para o corpo */
-    color: #333; /* Texto padrão mais escuro para melhor contraste */
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 .navbar {
@@ -32,11 +32,11 @@ body {
 .caixa {
     display: flex;
     align-items: center;
-    min-height: 100vh; /* Ocupa toda a altura da tela */
-    background-color: #fff; /* Cor de fundo para o contêiner */
+    min-height: 100vh;
+    background-color: #fff;
     padding: 2rem;
-    border-radius: 8px; /* Bordas arredondadas para o contêiner */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .inptPad {
