@@ -56,7 +56,7 @@ export const todosBancos = [phAlto, gostoFerrugem, cheiroEstranho, pressaoBaixa,
 function showAnswer(index) {
     switch (index) {
         case 0:
-            return console.log("Um pH alto na água pode ser corrigido ajustando-o para um nível mais neutro, geralmente entre 6,5 e 8,5, usando produtos como ácido cítrico, ácido ascórbico ou bicarbonato de sódio. Recomenda-se testar o pH da água regularmente para garantir que esteja dentro da faixa adequada para consumo.")
+            return "Um pH alto na água pode ser corrigido ajustando-o para um nível mais neutro, geralmente entre 6,5 e 8,5, usando produtos como ácido cítrico, ácido ascórbico ou bicarbonato de sódio. Recomenda-se testar o pH da água regularmente para garantir que esteja dentro da faixa adequada para consumo."
         case 1:
             return console.log("O gosto de ferrugem geralmente indica a presença de ferro na água. Isso pode ser resolvido instalando um sistema de filtração de água que seja eficaz na remoção de ferro, como um filtro de óxido de ferro ou um filtro de mangânese verde. Um pré-tratamento, como a oxidação do ferro, também pode ser necessário em alguns casos.")
         case 2:
