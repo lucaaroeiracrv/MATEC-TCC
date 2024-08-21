@@ -1,8 +1,10 @@
 <?php
 
+include("classes/bancoDados.php");
+
 session_start();
 
-// $nomeUser = $_SESSION["usuario"];
+$user = $_SESSION['usuario']
 ?>
 
 <head>
@@ -18,44 +20,42 @@ session_start();
 </head>
 
 <body>
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <h2>Menu</h2>
+    <div class="content">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Menu</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="listagem.php">Clientes</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </aside>
+        <div class="user-profile-circle">
+            <img src="" alt="teste" />
         </div>
-        <ul class="sidebar-menu">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">ChatBot</a></li>
-            <li><a type="button" id="#btnChat">Clientes</a></li>
-            <li><a href="#">Sair</a></li>
-        </ul>
-    </aside>
-
-    <header class="header">
-
-    </header>
-
-    <div class="main-content">
-        Bem vindo <?= $user ?>
-
-
-    </div>
-    <button class="chatbot-ativa">
-        <span class="material-symbols-outlined">mode_comment</span>
-        <span class="material-symbols-outlined">close</span>
-    </button>
-    <div class="chatbot">
-        <header>
-            <h2>ChatBot</h2>
-        </header>
-        <ul class="chatbox">
-            <li class="chat user">
-                <span class="material-symbols-outlined">smart_toy</span>
-                <p>Olá 👋<br> como posso ajudá-lo hoje</p>
-            </li>
-        </ul>
-        <div class="chat-input">
-            <textarea placeholder="Escreva uma mensagem..." required></textarea>
-            <span id="send-btn" class="material-symbols-outlined">send</span>
+        <div>
+            <br>
+            <h3>Bem vindo(a) <?= $user ?> </h3>
+        </div>
+        <button class="chatbot-ativa">
+            <span class="material-symbols-outlined">mode_comment</span>
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="chatbot">
+            <header>
+                <h2>ChatBot</h2>
+            </header>
+            <ul class="chatbox">
+                <li class="chat user">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                    <p>Olá 👋<br> como posso ajudá-lo hoje</p>
+                </li>
+            </ul>
+            <div class="chat-input">
+                <textarea placeholder="Escreva uma mensagem..." required></textarea>
+                <span id="send-btn" class="material-symbols-outlined">send</span>
+            </div>
         </div>
     </div>
 </body>

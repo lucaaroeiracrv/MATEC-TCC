@@ -17,9 +17,9 @@ if (isset($_POST['usuario'])) {
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        // var_dump($row);
+        $user = $row['usuario'];
         if (password_verify($sen, $row['senha'])) {
-            $_SESSION['usuario'] = $row['usuario'];
+            $_SESSION['usuario'] = $user;
             header("Location: main.php");
             exit();
         }
