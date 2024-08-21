@@ -52,6 +52,10 @@
     background-color: #f4f4f4;
 }
 
+.conteudoMain h3{
+    padding-left: 25px;
+}
+
 .content {
     display: flex;
     flex-wrap: wrap;

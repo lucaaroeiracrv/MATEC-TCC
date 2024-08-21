@@ -34,7 +34,7 @@ $user = $_SESSION['usuario']
         <div class="user-profile-circle">
             <img src="" alt="teste" />
         </div>
-        <div>
+        <div class="conteudoMain">
             <br>
             <h3>Bem vindo(a) <?= $user ?> </h3>
         </div>

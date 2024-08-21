@@ -14,62 +14,55 @@
 </head>
 
 <body>
-    <div class="conteiner">
-        <!-- Começo header  -->
-        <header class="headpag">
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="d-flex justify-content-between align-items-center p-3 bg-black">
             <div class="caixaimg">
-                <img src="./tema/IMG/matec.png">
+                <img src="./tema/IMG/matec.png" alt="Logo Matec" class="img-fluid">
             </div>
             <div class="login">
-                <a href="tela-login.php" class="logbtn">LOGIN</a>
+                <a href="tela-login.php" class="btn btn-light">LOGIN</a>
             </div>
         </header>
-        <!-- Final Header -->
 
-        <!-- Começo Body -->
-        <div>
-            <div class="conteudocorpo">
-                <div class="imgbox">
-                    <div class="txtint">
-                        <h1>MATEC</h1>
-                        <p>Precisa gerenciar seu sistema de comuincação com facilidade e tecnologia? <br> <br> A sua solução está aqui</p>
-                    </div>
-                    <img src="./tema/IMG/financa.png">
+        <!-- Main Content -->
+        <main>
+            <section class="d-flex align-items-center justify-content-around bg-light py-5">
+                <div class="text-center">
+                    <h1 class="display-4 fw-bold">MATEC</h1>
+                    <p class="lead">Precisa gerenciar seu sistema de comunicação com facilidade e tecnologia? <br> A sua solução está aqui</p>
                 </div>
-            </div>
-            <div class="contma">
-                <div class="valores1">
-                    <h2>VISÃO</h2>
-                    <h3>Visamos uma melhor relação entre o cliente/empresa e se tornar uma referencia no meio de autonomações</h3>
+                <div>
+                    <img src="./tema/IMG/financa.png" alt="Finanças" class="img-fluid">
+                </div>
+            </section>
+
+            <section class="d-flex justify-content-between align-items-center bg-light py-5 px-5">
+                <div class="text-center w-30">
+                    <h2 class="fw-bold">VISÃO</h2>
+                    <p>Visamos uma melhor relação entre cliente e empresa, buscando nos tornar referência em automação.</p>
                 </div>
                 <div class="divider"></div>
-                <div class="valores2">
-                    <h2>VALORES</h2>
-                    <h3>Com transparência, ética e equilibro na relação com os nossos clientes., sempre oferecendo o devido suporte</h3>
+                <div class="text-center w-30">
+                    <h2 class="fw-bold">VALORES</h2>
+                    <p>Com transparência, ética e equilíbrio, oferecemos suporte adequado aos nossos clientes.</p>
                 </div>
                 <div class="divider"></div>
-                <div class="valores3">
-                    <h2>MISSÃO</h2>
-                    <h3>Buscamos facilitar a vida do cliente com a tecnologia, em um sistema autonomo e pratico</h3>
+                <div class="text-center w-30">
+                    <h2 class="fw-bold">MISSÃO</h2>
+                    <p>Facilitamos a vida do cliente com tecnologia, em um sistema autônomo e prático.</p>
                 </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-black text-white text-center py-4">
+            <div class="container">
+                <p>Mude a sua forma de gerenciar seus negócios com a Matec.</p>
+                <p><strong>Entre em contato conosco:</strong></p>
+                <p>E-mail: matec@matec.com | Telefone: (99) 9999-9999</p>
             </div>
-
-            <!-- Final Body  -->
-            <!-- Começo Footer -->
-
-            <footer class="contfooter">
-                <div class="infos1">
-                    <p>Mude a sua forma de gerenciar seus negócios com a matec <br> o seu sistema com a MATEC</p>
-                </div>
-                <div class="contatos">
-                    <p class="conttitu">Entre em contato conosco:</p>
-                    <br>
-                    <p>E-mail: matec@matec.com</p>
-                        <p>Telefone: (99) 9999-9999</p>
-                </div>
-        </div>
         </footer>
-        <!-- Final Footer -->
     </div>
 </body>
 
