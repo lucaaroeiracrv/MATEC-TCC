@@ -4,7 +4,8 @@ include("classes/bancoDados.php");
 
 session_start();
 
-$user = $_SESSION['usuario']
+$user = $_SESSION['usuario'];
+
 ?>
 
 <head>
