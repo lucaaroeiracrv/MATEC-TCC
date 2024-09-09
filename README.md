@@ -41,7 +41,7 @@ As principais tecnologias usadas neste projeto incluem:
 
 
 
-## **Feito com ❤️ pela equipe Matec!**
+## **Atenciosamente, Matec!**
 
 
 
