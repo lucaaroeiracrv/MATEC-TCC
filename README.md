@@ -1,10 +1,5 @@
 # 🌟 **Matec - Soluções Inovadoras em Engenharia** 🌟
 
-![GitHub repo size](https://img.shields.io/github/repo-size/SEU_USUARIO/NOME_DO_REPOSITORIO?color=blue&style=for-the-badge)
-![GitHub contributors](https://img.shields.io/github/contributors/SEU_USUARIO/NOME_DO_REPOSITORIO?color=green&style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/SEU_USUARIO/NOME_DO_REPOSITORIO?style=for-the-badge)
-![GitHub stars](https://img.shields.io/github/stars/SEU_USUARIO/NOME_DO_REPOSITORIO?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/SEU_USUARIO/NOME_DO_REPOSITORIO?style=for-the-badge)
 
 ---
 
@@ -46,8 +41,7 @@ As principais tecnologias usadas neste projeto incluem:
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 
-
-##Feito com ❤️ pela equipe Matec!
+**Feito com ❤️ pela equipe Matec!**
 
 
 
