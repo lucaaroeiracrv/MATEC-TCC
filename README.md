@@ -37,11 +37,11 @@ As principais tecnologias usadas neste projeto incluem:
 
 👥 Contribuidores
 <table> <tr> <td align="center"> <a href="https://github.com/Rafa3lFerreira"> <img src="https://avatars.githubusercontent.com/Rafa3lFerreira" width="100px;" alt="Rafael Ferreira"/> <br /> <sub><b>Rafael Ferreira</b></sub> </a> </td> <td align="center"> <a href="https://github.com/lucaaroieracrv"> <img src="https://avatars.githubusercontent.com/lucaaroieracrv" width="100px;" alt="Luca Aroeira"/> <br /> <sub><b>Luca Aroeira</b></sub> </a> </td> </tr> </table>
-📜 Licença
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 
-**Feito com ❤️ pela equipe Matec!**
+
+
+##**Feito com ❤️ pela equipe Matec!**
 
 
 
