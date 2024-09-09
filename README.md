@@ -1,49 +1,66 @@
-🚀 Matec - Soluções Inovadoras para Engenharia
+# 🌟 **Matec - Soluções Inovadoras em Engenharia** 🌟
 
-Bem-vindo ao repositório da Matec, uma empresa fictícia desenvolvida como parte do Trabalho de Conclusão de Curso (TCC), com o objetivo de explorar soluções inovadoras nas áreas de:
+![GitHub repo size](https://img.shields.io/github/repo-size/SEU_USUARIO/NOME_DO_REPOSITORIO?color=blue&style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/SEU_USUARIO/NOME_DO_REPOSITORIO?color=green&style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/SEU_USUARIO/NOME_DO_REPOSITORIO?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/SEU_USUARIO/NOME_DO_REPOSITORIO?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/SEU_USUARIO/NOME_DO_REPOSITORIO?style=for-the-badge)
 
-🔧 Engenharia Mecânica
-⚡ Engenharia Elétrica
-💻 Tecnologia da Informação
-📄 Sobre o Projeto
-Este repositório contém os artefatos desenvolvidos como parte do projeto acadêmico da Matec. Nosso foco é na exploração de soluções tecnológicas de ponta para otimizar processos em diversas áreas da engenharia.
+---
 
-🛠️ Tecnologias Utilizadas
+## 🏢 **Sobre o Projeto**
 
-⚙️ Funcionalidades
-🚀 Soluções Otimizadas: Desenvolvimento de ferramentas para automação e otimização de processos.
-📊 Análise de Dados: Implementação de sistemas de análise e visualização de dados.
-🛡️ Segurança: Aplicação de práticas de segurança da informação em todos os módulos.
-📦 Instalação e Execução
-Para rodar o projeto localmente, siga as instruções abaixo:
+Bem-vindo ao repositório da **Matec**! Este projeto faz parte do Trabalho de Conclusão de Curso (TCC) e simula o desenvolvimento de uma empresa fictícia focada em **soluções inovadoras** nas áreas de:
 
-Clone este repositório:
-bash
-Copy code
-git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
-Navegue até o diretório do projeto:
-bash
-Copy code
-cd NOME_DO_REPOSITORIO
-Instale as dependências:
-bash
-Copy code
-npm install
-Execute o projeto:
-bash
-Copy code
-npm start
-🚀 Deploy
-O projeto foi implantado no GitHub Pages e pode ser acessado aqui.
+- 🔧 **Engenharia Mecânica**
+- ⚡ **Engenharia Elétrica**
+- 💻 **Tecnologia da Informação**
+
+Nosso objetivo é criar ferramentas e sistemas que otimizam processos em diversos setores industriais e acadêmicos.
+
+---
+
+## 🚀 **Funcionalidades Principais**
+
+- 📈 **Análise de Dados Avançada**: Transforme dados brutos em relatórios visuais e analíticos.
+- 🔒 **Segurança Aprimorada**: Implementação das melhores práticas de segurança em todos os níveis.
+- 🤖 **Automação Inteligente**: Reduza a intervenção manual com processos automatizados.
+
+---
+
+## 🛠 **Tecnologias Utilizadas**
+
+As principais tecnologias usadas neste projeto incluem:
+
+![PHP](https://img.shields.io/badge/-PHP-777BB4?logo=php&logoColor=white&style=for-the-badge)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge)
+![CSS](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=for-the-badge)
+![HTML](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=for-the-badge)
+
+---
+
 
 👥 Contribuidores
-Agradecimentos aos nossos contribuidores:
-
 <table> <tr> <td align="center"> <a href="https://github.com/Rafa3lFerreira"> <img src="https://avatars.githubusercontent.com/Rafa3lFerreira" width="100px;" alt="Rafael Ferreira"/> <br /> <sub><b>Rafael Ferreira</b></sub> </a> </td> <td align="center"> <a href="https://github.com/lucaaroieracrv"> <img src="https://avatars.githubusercontent.com/lucaaroieracrv" width="100px;" alt="Luca Aroeira"/> <br /> <sub><b>Luca Aroeira</b></sub> </a> </td> </tr> </table>
-📄 Licença
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.
+📜 Licença
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-Feito com ❤️ por Sua Equipe.
+Feito com ❤️ pela equipe Matec!
+```yaml
 
-Seções Adicionais
-Você pode adicionar mais seções como Contribuição, Changelog, e Testes conforme a necessidade do seu projeto.
+---
+
+### Segundo markdown (Deploy separado):
+
+```md
+# 🌐 **Deploy**
+
+O projeto está disponível online através do GitHub Pages:
+
+[**Clique aqui para acessar**](#)
+
+---
+
+
+     
+
