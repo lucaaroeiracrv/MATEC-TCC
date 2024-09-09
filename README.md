@@ -45,21 +45,10 @@ As principais tecnologias usadas neste projeto incluem:
 📜 Licença
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-Feito com ❤️ pela equipe Matec!
-```yaml
 
----
 
-### Segundo markdown (Deploy separado):
+##Feito com ❤️ pela equipe Matec!
 
-```md
-# 🌐 **Deploy**
-
-O projeto está disponível online através do GitHub Pages:
-
-[**Clique aqui para acessar**](#)
-
----
 
 
      
