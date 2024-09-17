@@ -32,7 +32,7 @@ $user = $_SESSION['usuario']
             </ul>
         </aside>
         <div class="user-profile-circle">
-            <img src="" alt="teste" />
+            <img src="./tema//IMG//usuario.png" alt="teste" />
         </div>
         <div class="conteudoMain">
             <br>
