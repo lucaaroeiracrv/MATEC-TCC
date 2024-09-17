@@ -227,3 +227,14 @@
 .chat-input textarea:valid ~ span {
     visibility: visible;
 }
+.chatbox .user span {
+    height: 40px;
+    width: 40px;
+    background-image: url('../IMG/mascot.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%; 
+    text-align: center;
+    line-height: 40px;
+    color: transparent; 
+}
