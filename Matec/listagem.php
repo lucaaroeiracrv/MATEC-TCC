@@ -37,66 +37,65 @@ if ($result->num_rows > 0) {
                 <h2>Menu</h2>
             </div>
             <ul class="sidebar-menu">
-                <li><a href="#">Inicio</a></li>
+                <li><a href="main.php">Inicio</a></li>
                 <li><a href="listagem.php">Clientes</a></li>
-                <li><a href="#">Sair</a></li>
+                <li><a href="index.php">Sair</a></li>
             </ul>
         </aside>
         <div class="user-profile-circle">
-            <img src="" alt="teste" />
+            <img src="./tema//IMG/patp.gif" alt="teste" />
         </div>
         <div class="conteudoMain">
             <br>
             <h3>Listar Clientes</h3>
-                <div class="card-body centraliza">
-                    <div class="table-responsive">
-                        <table class="table" id="tableAssinantes" style="text-align: center;">
-                            <thead>
+            <div class="card-body centraliza">
+                <div class="table-responsive">
+                    <table class="table" id="tableAssinantes" style="text-align: center;">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Usuario</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Ativo</th>
+                                <th scope="col">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            foreach ($assinantes as $assinante) {
+                            ?>
                                 <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Usuario</th>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Ativo</th>
-                                    <th scope="col">Ações</th>
+                                    <th scope="row"> <?= $assinante['id'] ?></th>
+                                    <td> <?= $assinante['usuario'] ?></td>
+                                    <td> <?= $assinante['nome'] ?></td>
+                                    <td> <?= $assinante['email'] ?></td>
+                                    <td> <?= $assinante['ativo'] == 1 ? "Ativo" : "Desativado"; ?></td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle rounded-pill" type="button" id="dropdownMenuActions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Ações
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuActions">
+                                                <li>
+                                                    <a href="editar-user.php" class="dropdown-item">
+                                                        <i class="fa-solid fa-user-pen"></i> EDITAR
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <button class="dropdown-item" onclick="mudarStatus(<?= $assinante['id'] ?>, 0)">
+                                                        <i class="fa-solid fa-x"></i> EXCLUIR
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                foreach ($assinantes as $assinante) {
-                                ?>
-                                    <tr>
-                                        <th scope="row"> <?= $assinante['id'] ?></th>
-                                        <td> <?= $assinante['usuario'] ?></td>
-                                        <td> <?= $assinante['nome'] ?></td>
-                                        <td> <?= $assinante['email'] ?></td>
-                                        <td> <?= $assinante['ativo'] == 1 ? "Ativo" : "Desativado"; ?></td>
-                                        <td>
-                                            <div class="dropdown">
-                                                <button class="btn btn-secondary dropdown-toggle rounded-pill" type="button" id="dropdownMenuActions" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Ações
-                                                </button>
-                                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuActions">
-                                                    <li>
-                                                        <a href="editar-user.php" class="dropdown-item">
-                                                            <i class="fa-solid fa-user-pen"></i> EDITAR
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <button class="dropdown-item" onclick="mudarStatus(<?= $assinante['id'] ?>, 0)">
-                                                            <i class="fa-solid fa-x"></i> EXCLUIR
-                                                        </button>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                            </tbody>
-                        <?php
-                                }
-                        ?>
-                        </table>
-                    </div>
+                        </tbody>
+                    <?php
+                            }
+                    ?>
+                    </table>
                 </div>
             </div>
         </div>
@@ -110,13 +109,10 @@ if ($result->num_rows > 0) {
 
 <script>
     $(document).ready(function() {
-        $('#tableAssinantes').DataTable({
-
-        });
+        $('#tableAssinantes').DataTable({});
     });
 
     function mudarStatus(id, ativo) {
-
         $.ajax({
             type: "POST",
             url: '/MATEC---Trabalho-de-Conclusao-de-Curso/matec/ajax/excluir_usuario.php',
