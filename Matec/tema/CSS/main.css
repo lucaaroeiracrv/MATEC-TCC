@@ -7,6 +7,7 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Estilização da barra lateral */
 .sidebar {
     width: 250px;
     background-color: #fff;
@@ -52,15 +53,25 @@
     background-color: #f4f4f4;
 }
 
-.conteudoMain h3{
-    padding-left: 25px;
+.sidebar-menu li.active a {
+    background-color: #724ae8;
+    color: white;
+    font-weight: 500;
 }
 
+/* Estilização do conteúdo principal */
 .content {
     display: flex;
-    flex-wrap: wrap;
 }
 
+.main-content {
+    flex: 1;
+    margin-left: 40px; /* Ajuste para garantir que o conteúdo não interfira com o perfil e o chatbot */
+    padding: 20px;
+    max-width: 80%; /* Ajuste para limitar a largura */
+}
+
+/* Estilização do perfil do usuário */
 .user-profile-circle {
     position: fixed;
     top: 25px;
@@ -82,9 +93,9 @@
     height: 100%;
     object-fit: cover;
 }
-/* Area do chatbot */
 
-.chatbot-ativa{
+/* Estilização do chatbot */
+.chatbot-ativa {
     position: fixed;
     right: 40px;
     bottom: 35px;
@@ -105,7 +116,8 @@
 .show-chatbot .chatbot-ativa {
     transform: rotate(90deg);
 }
-.chatbot-ativa span{
+
+.chatbot-ativa span {
     position: absolute;
 }
 
@@ -114,9 +126,10 @@
     opacity: 0;
 }
 
-.show-chatbot .chatbot-ativa span:last-child{
+.show-chatbot .chatbot-ativa span:last-child {
     opacity: 1;
 }
+
 .chatbot {
     position: fixed;
     right: 40px;
@@ -134,34 +147,34 @@
     transition: all 0.1s ease;
 } 
 
-.show-chatbot .chatbot{
+.show-chatbot .chatbot {
     transform: scale(1);
     opacity: 1;
     pointer-events: auto;
 }
 
-.chatbot header{
+.chatbot header {
     background-color: #724ae8;
     padding: 16px 0;
     text-align: center;
 }
 
-.chatbot header h2{
+.chatbot header h2 {
     color: #fff;
     font-size: 1.4rem;
 }
 
-.chatbot .chatbox{
+.chatbot .chatbox {
     height: 510px;
     overflow-y: auto;
     padding: 15px 20px 70px;
 }
 
-.chatbox .chat{
+.chatbox .chat {
     display: flex;
 }
 
-.chatbox .user span{
+.chatbox .user span {
     height: 40px;
     width: 40px;
     color: #fff;
@@ -173,11 +186,12 @@
     margin: 0 10px 7px 0;
 }
 
-.chatbox .outgoing{
+.chatbox .outgoing {
     margin: 20px 0;
     justify-content: flex-end;
 }
-.chatbox .chat p{
+
+.chatbox .chat p {
     color: #fff;
     max-width: 80%;
     font-size: 0.90rem;
@@ -186,13 +200,13 @@
     background: #724ae8;
 }
 
-.chatbox .user p{
+.chatbox .user p {
     color: #000;
     background: #f9f9f9;
     border: 10px 10px 10px 0;
 }
 
-.chatbot .chat-input{
+.chatbot .chat-input {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -203,7 +217,7 @@
     border-top: 1px solid #ccc;
 }
 
-.chat-input textarea{
+.chat-input textarea {
     width: 100%;
     height: 55px;
     border: none;
@@ -214,7 +228,7 @@
     padding: 16px 15px 16px 0;
 }
 
-.chat-input span{
+.chat-input span {
     color: #724ae8;
     font-size: 1.35rem;
     cursor: pointer;
@@ -227,6 +241,7 @@
 .chat-input textarea:valid ~ span {
     visibility: visible;
 }
+
 .chatbox .user span {
     height: 40px;
     width: 40px;
@@ -237,4 +252,76 @@
     text-align: center;
     line-height: 40px;
     color: transparent; 
+}
+
+/* Estilização do texto de boas-vindas */
+.welcome-text {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
+}
+
+.welcome-text h3 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+.welcome-text p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Ajuste do layout das estatísticas e gráfico */
+.stats-chart-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 70px); /* Ajuste conforme necessário */
+    margin: 20px;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stat-item {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-item h3 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+.stat-item p {
+    margin: 10px 0 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.chart-container {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: 100% !important; /* Ajuste a altura conforme necessário */
 }

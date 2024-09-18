@@ -1,12 +1,11 @@
 <?php
-
 include("classes/bancoDados.php");
-
 session_start();
-
-$user = $_SESSION['usuario']
+$user = $_SESSION['usuario'];
 ?>
 
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,18 +25,46 @@ $user = $_SESSION['usuario']
                 <h2>Menu</h2>
             </div>
             <ul class="sidebar-menu">
-                <li><a href="#">Inicio</a></li>
+                <li><a href="main.php">Inicio</a></li>
                 <li><a href="listagem.php">Clientes</a></li>
-                <li><a href="#">Sair</a></li>
+                <li><a href="index.php">Sair</a></li>
             </ul>
         </aside>
-        <div class="user-profile-circle">
-            <img src="./tema//IMG//usuario.png" alt="teste" />
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- User Profile Circle -->
+            <div class="user-profile-circle">
+                <img src="./tema/IMG/usuario.png" alt="teste" />
+            </div>
+            
+           <!-- Welcome Message -->
+<div class="welcome-text">
+    <h3>Bem-vindo(a), <?= $user ?>!</h3>
+    <p>Confira as estatísticas e o gráfico abaixo para obter uma visão geral.</p>
+</div>
+
+<!-- Estatísticas e Gráfico -->
+<div class="stats-chart-container">
+    <div class="stats">
+        <div class="stat-item" id="clientes-cadastrados">
+            <h3>120</h3>
+            <p>Clientes Cadastrados</p>
         </div>
-        <div class="conteudoMain">
-            <br>
-            <h3>Bem vindo(a) <?= $user ?> </h3>
+        <div class="stat-item" id="interacoes-hoje">
+            <h3>150</h3>
+            <p>Interações Hoje</p>
         </div>
+    </div>
+
+    <!-- Gráfico de Interações (Chart.js) -->
+    <div class="chart-container">
+        <canvas id="chat-interaction-chart"></canvas>
+    </div>
+</div>
+
+
+        <!-- Chatbot -->
         <button class="chatbot-ativa">
             <span class="material-symbols-outlined">mode_comment</span>
             <span class="material-symbols-outlined">close</span>
@@ -58,4 +85,23 @@ $user = $_SESSION['usuario']
             </div>
         </div>
     </div>
+
+    <!-- Chart.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('chat-interaction-chart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                datasets: [{
+                    label: 'Interações',
+                    data: [50, 60, 80, 70, 90],
+                    borderColor: '#724ae8',
+                    fill: false
+                }]
+            }
+        });
+    </script>
 </body>
+</html>
