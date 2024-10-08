@@ -36,7 +36,7 @@ As principais tecnologias usadas neste projeto incluem:
 
 
 👥 Contribuidores
-<table> <tr> <td align="center"> <a href="https://github.com/Rafa3lFerreira"> <img src="https://avatars.githubusercontent.com/Rafa3lFerreira" width="100px;" alt="Rafael Ferreira"/> <br /> <sub><b>Rafael Ferreira</b></sub> </a> </td> <td align="center"> <a href="https://github.com/lucaaroeiracrv"> <img src="https://avatars.githubusercontent.com/lucaaroeiracrv" width="100px;" alt="Luca Aroeira"/> <br /> <sub><b>Luca Aroeira</b></sub> </a> </td>a href="https://github.com/leonardolimasrosa"> <img src="https://avatars.githubusercontent.com/leonardolimasrosa" width="100px;" alt="Leonardo Rosa"/> <br /> <sub><b>Leonardo Rosa</b></sub> </a> </td> </tr> </table>
+<table> <tr> <td align="center"> <a href="https://github.com/Rafa3lFerreira"> <img src="https://avatars.githubusercontent.com/Rafa3lFerreira" width="100px;" alt="Rafael Ferreira"/> <br /> <sub><b>Rafael Ferreira</b></sub> </a> </td> <td align="center"> <a href="https://github.com/lucaaroeiracrv"> <img src="https://avatars.githubusercontent.com/lucaaroeiracrv" width="100px;" alt="Luca Aroeira"/> <br /> <sub><b>Luca Aroeira</b></sub> </a> </td><a href="https://github.com/leonardolimasrosa"> <img src="https://avatars.githubusercontent.com/leonardolimasrosa" width="100px;" alt="Leonardo Rosa"/> <br /> <sub><b>Leonardo Rosa</b></sub> </a> </td> </tr> </table>
 
 
 
