@@ -67,7 +67,7 @@ As principais tecnologias usadas neste projeto incluem:
                     <br /> 
                     <sub>
                          <b>
-                              Leonardo Rosa
+                              Leonardo Rosa 
                          </b>
                     </sub> 
                </a> 
