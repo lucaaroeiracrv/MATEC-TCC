@@ -76,7 +76,7 @@ As principais tecnologias usadas neste projeto incluem:
 </table>
 
 
-
+(╯°□°）╯︵ ┻━┻
 
 ## **Atenciosamente, Matec!**
 
