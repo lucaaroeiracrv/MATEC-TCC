@@ -2,6 +2,19 @@
 include("classes/bancoDados.php");
 session_start();
 $user = $_SESSION['usuario'];
+
+$sql = "SELECT COUNT(*) AS total_usuarios FROM usuarios_cadastrados"; 
+$result = $mysqli->query($sql);
+
+if ($result) {
+    $row = $result->fetch_assoc();
+    $totalUsuarios = $row['total_usuarios'];
+} else {
+    $totalUsuarios = 0; 
+}
+
+$mysqli->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +28,32 @@ $user = $_SESSION['usuario'];
     <link rel="stylesheet" href="./tema/CSS/main.css">
     <script type="module" src="./tema/JS/main.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function atualizarInteracoes() {
+            $.ajax({
+                type: "POST",
+                url: "/matec-tcc/matec/ajax/interacoes_diarias.php",  // Caminho do arquivo PHP correto
+                data: {},  // Sem parâmetros para enviar
+                success: function (resposta) {
+                    if (resposta) {
+                        $('#totalInteracoes').text(resposta);
+                    } else {
+                        console.log('Erro ao buscar as interações');
+                    }
+                },
+                error: function () {
+                    console.log('Erro na requisição AJAX');
+                }
+            });
+        }
+
+        // Atualiza a cada 5 segundos
+        setInterval(atualizarInteracoes, 5000);
+        $(document).ready(function() {
+            atualizarInteracoes();  // Chama ao carregar a página
+        });
+    </script>
+    
     <title>Main</title>
 </head>
 
@@ -48,12 +87,11 @@ $user = $_SESSION['usuario'];
 <div class="stats-chart-container">
     <div class="stats">
         <div class="stat-item" id="clientes-cadastrados">
-            <h3>120</h3>
+            <h3><?php echo $totalUsuarios; ?></h3>
             <p>Clientes Cadastrados</p>
         </div>
         <div class="stat-item" id="interacoes-hoje">
-            <h3>150</h3>
-            <p>Interações Hoje</p>
+            <h3>Interações Hoje <span id="totalInteracoes"></span></h3>
         </div>
     </div>
 
@@ -88,19 +126,44 @@ $user = $_SESSION['usuario'];
 
     <!-- Chart.js Script -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <script>
-        var ctx = document.getElementById('chat-interaction-chart').getContext('2d');
-        var chart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
-                datasets: [{
-                    label: 'Interações',
-                    data: [50, 60, 80, 70, 90],
-                    borderColor: '#724ae8',
-                    fill: false
-                }]
-            }
+        $(document).ready(function() {
+            $.ajax({
+                type: "POST",
+                url: "/matec-tcc/matec/ajax/interacoes_mensais.php", 
+                dataType: "json",
+                success: function(dados) {
+                    const labels = dados.map(item => item.mes);
+                    const valores = dados.map(item => item.total_interacoes); 
+                    
+                    var ctx = document.getElementById('chat-interaction-chart').getContext('2d');
+                    var chart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                label: 'Interações',
+                                data: valores,
+                                borderColor: '#724ae8',
+                                fill: false
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                },
+                error: function() {
+                    console.log('Erro ao buscar os dados do gráfico');
+                }
+            });
         });
     </script>
 </body>
