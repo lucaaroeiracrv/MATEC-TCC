@@ -71,6 +71,17 @@ As principais tecnologias usadas neste projeto incluem:
                     </sub> 
                </a> 
           </td> 
+           <td>
+               <a href="https://github.com/lucaxaviers">
+                    <img src="https://avatars.githubusercontent.com/lucaxaviers" width="100px;" alt="Lucas Xavier"/> 
+                    <br /> 
+                    <sub>
+                         <b>
+                              Lucas Xavier 
+                         </b>
+                    </sub> 
+               </a> 
+          </td> 
      </tr> 
 </table>
 
